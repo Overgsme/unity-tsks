@@ -5,8 +5,8 @@ public static class Program
 {
     public static void Main(string[] args)
     {
-        CustomVector v1 = new CustomVector{ x = 15,y = 30,z = 10 };
-        CustomVector v2 = new CustomVector{ x = 5,y = 35,z = 20 };
+        CustomVector v1 = new CustomVector { x = 15, y = 30, z = 10 };
+        CustomVector v2 = new CustomVector { x = 5, y = 35, z = 20 };
         CustomVector v3 = v1 + v2;
         CustomVector v4 = v1 - v2;
         CustomVector v5 = v3 * 5;

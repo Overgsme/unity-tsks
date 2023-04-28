@@ -5,19 +5,16 @@ namespace Characrers
 {
     public interface Character
         {
-        int hp { get; set; }
         string Name { get; }
         bool IsAttackable { get; }
         void Attack(Enemies.Enemy enemy);
         void GetDamage(int damage);
     }
-    public class WeakCharacter : Character
+    class WeakCharacter : Character
     {
         public bool IsAttackable => true;
 
         public string Name => "Jim";
-        int _hp;
-        public int hp { get => _hp; set => _hp = value; }
 
         public void Attack(Enemy enemy)
         {
@@ -26,15 +23,13 @@ namespace Characrers
 
         public void GetDamage(int damage)
         {
-            Console.WriteLine("Ougth.. " + hp + -damage);
-            hp -= damage;
+            Console.WriteLine("Ougth.. "+-damage);
         }
     }
-    public class StrongCharacter : Character
+    class StrongCharacter : Character
     {
         public string Name => "Jerry";
-        int _hp;
-        public int hp { get => _hp; set => _hp = value; }
+
         public bool IsAttackable => true;
 
         public void Attack(Enemy enemy)
@@ -44,15 +39,12 @@ namespace Characrers
 
         public void GetDamage(int damage)
         {
-            Console.WriteLine("Ougth.. " + hp + -damage);
-            hp -= damage;
+            Console.WriteLine("Ougth.. "+-damage);
         }
     }
-    public class ImmortalCharacter : Character
+    class ImmortalCharacter : Character
     {
         public string Name => "Billy";
-        int _hp;
-        public int hp { get => _hp; set => _hp = value; }
         public bool IsAttackable => false;
 
         public void Attack(Enemy enemy)
